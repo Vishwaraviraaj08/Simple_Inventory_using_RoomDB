@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Inventory</string>
+
+
+    <string-array name="account_types">
+        <item>Sales</item>
+        <item>General Income</item>
+        <item>Interest Income</item>
+        <item>Late Fee Income</item>
+        <item>Discount</item>
+        <item>Other Charges</item>
+        <item>Shipping Charge</item>
+    </string-array>
+
+    <string-array name="dimension_units">
+        <item>cm</item>
+        <item>m</item>
+        <item>in</item>
+    </string-array>
+
+    <string-array name="weight_units">
+        <item>kg</item>
+        <item>g</item>
+        <item>lb</item>
+        <item>oz</item>
+    </string-array>
+
+
+
+</resources>

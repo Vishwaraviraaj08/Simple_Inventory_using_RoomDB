@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    tools:context=".AddItemActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:id="@+id/radioGroupType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonGoods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goods" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service" />
+            </RadioGroup>
+
+            <!-- Item Details -->
+            <EditText
+                android:id="@+id/editTextItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Item Name"
+                android:importantForAccessibility="yes"
+                android:minHeight="48dp"
+                android:required="true" />
+
+            <EditText
+                android:id="@+id/editTextSKU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="SKU"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextNoOfUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="No of Units"
+                android:importantForAccessibility="yes"
+                android:minHeight="48dp"
+                android:required="true" />
+
+            <CheckBox
+                android:id="@+id/checkBoxReturnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Returnable Item" />
+
+            <!-- Sales Info Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sales Info"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextSellingPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Selling Price"
+                android:importantForAccessibility="yes"
+                android:minHeight="48dp"
+                android:required="true" />
+
+            <Spinner
+                android:id="@+id/spinnerSalesAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/account_types"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Description"
+                android:minHeight="48dp" />
+
+            <!-- Purchase Info Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Purchase Info"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCostPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Cost Price"
+                android:importantForAccessibility="yes"
+                android:minHeight="48dp"
+                android:required="true" />
+
+            <Spinner
+                android:id="@+id/spinnerPurchaseAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/account_types"
+                android:minHeight="48dp" />
+
+            <!-- Inventory Track Section -->
+            <CheckBox
+                android:id="@+id/checkBoxInventoryTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:minHeight="48dp"
+                android:text="Track Inventory"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/trackInventorylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextOpeningStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Opening Stock"
+                    android:importantForAccessibility="yes"
+                    android:required="true" />
+
+                <EditText
+                    android:id="@+id/editTextOpeningStockRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Opening Stock Rate per Unit"
+                    android:importantForAccessibility="yes"
+                    android:required="true" />
+
+                <EditText
+                    android:id="@+id/editTextReorderLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reorder Level"
+                    android:importantForAccessibility="yes"
+                    android:required="true" />
+            </LinearLayout>
+
+            <!-- Additional Info Accordion -->
+
+            <CheckBox
+                android:id="@+id/checkBoxAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="-345dp"
+                android:checked="false"
+                android:hint="Additional Info" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Dimensions -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dimensions"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextLength"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Length" />
+
+                    <EditText
+                        android:id="@+id/editTextBreadth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Breadth" />
+
+                    <EditText
+                        android:id="@+id/editTextHeight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Height" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDimensionUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/dimension_units" />
+                </LinearLayout>
+
+                <!-- Weight -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Weight"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextWeight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Weight" />
+
+                    <Spinner
+                        android:id="@+id/spinnerWeightUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/weight_units" />
+                </LinearLayout>
+
+                <!-- MPN -->
+                <EditText
+                    android:id="@+id/editTextMPN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="MPN" />
+
+                <!-- ISBN -->
+                <EditText
+                    android:id="@+id/editTextISBN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="ISBN" />
+
+                <!-- UPC -->
+                <EditText
+                    android:id="@+id/editTextUPC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="UPC" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="40dp"
+                android:text="Save" />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>
