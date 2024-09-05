@@ -129,17 +129,13 @@ class AddItemActivity : AppCompatActivity() {
             additionalInfo = additionalInfo
         )
 
-
         lifecycleScope.launch {
             itemViewModel.insertItem(item)
         }
 
-
-
-
-
         Toast.makeText(this, "Item saved successfully", Toast.LENGTH_SHORT).show()
 
         finish()
+
     }
 }
