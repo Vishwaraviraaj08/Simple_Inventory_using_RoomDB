@@ -15,5 +15,6 @@ data class Item(
     val itemAccount: String,
     val openingStock: Double,
     val reorderLevel: Double,
-    @Embedded val additionalInfo: AdditionalInfo? = null
+    @Embedded val additionalInfo: AdditionalInfo? = null,
+    val dummy: String ?= null
 )
